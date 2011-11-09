@@ -1,0 +1,20 @@
+/**
+ * Styles for Internet Explorer 6
+ *
+ * Original Author: Rishee Patel
+ *
+ */
+
+div#top-nav,
+div#main,
+div#footer-container {
+	height:1%;
+}
+
+
+div#header div#event-details {
+	margin-right:10px;
+}
+div#top-nav ul li.blog {
+	margin-right:10px;
+}

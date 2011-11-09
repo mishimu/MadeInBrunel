@@ -1,0 +1,976 @@
+/**
+ * Core styles for all browsers
+ *
+ * Authors of 2011: Rishee Patel
+ * Authors of 2012 : Aaron Faber 
+
+OrangeL #ff6633 
+
+*/
+
+/* CSS Good Practices */
+/*
+ * Semantic ids and classes - the class or id name should describe the purpose of the
+ * element or the content inside it - they should not be named after the styles e.g. left, right,
+ * yellow, etc.
+ *
+ * Margins - please avoid using margin-left, padding-top, etc. Ideally you should specify
+ * all the values when you specify margin or padding, e.g. margin: 0 0 10px 0; - this is 
+ * because it makes it very clear what is being applied to the element and far easier to 
+ * change and debug at a later stage
+ *
+ * Importants - importants are the spawn of satan! They break the cascading nature of the 
+ * stylesheet and cause all kinds of crazy problems. Please do not use them.
+ *
+ * Specifying elements with class / id names - for example = div.class-name. This should 
+ * definitely not be done with ids as they are unique identifiers. With class names it is
+ * more debatable. I tend to find they cause problems later on if the mark up changes. As
+ * such they are not necessary so please do it sparingly.
+ *
+ * Background urls - there is no need to have quotes when specifying the links e.g. 
+ * background:url("imageFolder/image.jpg") 
+*/
+
+/* Contents */
+
+/*
+	1.0 Reset
+	2.0 General
+	3.0 Layout
+	4.0 Mailing List
+		4.1 Error Handling
+
+*/
+
+/* 1.0 Reset all browsers */
+
+* {
+	margin:0;
+	padding:0;
+}
+
+/* 2.0 General */
+
+body {
+	font:normal 75% Georgia, Arial, Helvetica, sans-serif;
+	color:#333;
+	background:#fff;
+}
+h1 {
+	margin:0 0 21px;
+	font-size:3.00em;
+	line-height:1.2em;
+	word-spacing:-2px;
+	color:#ff6633;
+}
+h2 {
+	margin:0.4em 0 0.7em;
+	font-size:2.00em;
+	line-height:1.2em;
+	color:#ff6633;
+	font-weight: lighter;
+}
+
+#container h2:first-child{	
+	margin-top: 0	
+}
+h3 {
+	margin:0.9em 0 1.2em;
+	font-size:1.33em;
+	line-height:1.2em;
+	font-weight: lighter;
+}
+h4 {
+	font-size:1.08em;
+	line-height:1.15em;
+	font-weight: lighter;
+}
+h1, h2, h3, h4 {
+	font-weight:normal;
+}
+div#content h2 a {
+	text-decoration:none;
+	color:#ff6633;
+}
+p {
+	margin:0 0 1.6em;
+	line-height:1.50em;
+}
+a {
+	color:#333;
+	text-decoration:underline;
+}
+img {
+	border:none;
+}
+div.banner {
+	margin:27px 0 22px;
+}
+div.main ul{
+	margin: 15px 0;
+}
+div.main ul li {
+	padding-left:20px;
+	margin: 5px 0 0 10px;
+	list-style:none;
+	background:url("_images/site_back-ul-li.gif") no-repeat left center;
+}
+div.main ul li:first-child{
+	margin-top: 0;
+}
+
+input[type=text], input[type=email], input[type=tel]{
+	margin: 5px 0 10px 0;
+	padding:4px 5px;
+	font-family:Georgia, Arial, "Helvetica", sans-serif;
+	color:#333;
+	border:1px solid #ccc;
+	background:none;
+}
+
+input[type=checkbox], input[type=radio]{
+	margin: 5px 10px 10px 0;
+}
+
+input[type=submit]{
+	height:35px;
+	width:102px;
+	cursor:pointer;
+	text-indent:-9999em;
+	color:#ff6633;
+	border:none;
+	background:url("_images/site_back-submit.gif") no-repeat left top;
+}
+
+::selection {
+        background: #ff9470;
+}
+::-moz-selection {
+        background: #ff9470;
+}
+#footer ::selection{
+	background: #fff;
+	color: #ff6633;
+}
+#footer ::moz-selection{
+	background: #fff;
+	color: #ff6633;
+}
+
+/* 
+ *  2.0  Common Classes 
+*/
+/* Comment 2012: Most of these classes I would like to see removed for the following reasons:
+ * 1) left and right go against the principle that element labels should be semantic
+ * i.e. that they describe the purpose of the element. It is bad practice to name
+ * a class with the style - as the situation can arise where the class "right" has a float left 
+ * in it - this is only going to confuse everybody
+*/
+
+.clear {	
+	clear: both	
+}
+.left {	
+	float: left	
+}
+.right {	
+	float: right 
+}
+.highlight {
+	color:#ff6633; 
+}
+.no-margin {	
+	margin:0 !important; /* importants are the spawn of the devil, it should be removed if possible */
+} 
+.hidden{
+    display: none;
+}
+
+/* - Layout - */
+div#container {
+	margin:0 auto;
+	width:960px;
+}
+div#content {
+	float:right;
+	width:636px;
+}
+div #aside {
+	float:left;
+	width:292px;
+}
+div.main:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+/* 4.0 Mailing List */
+/*
+	All styles relating to the mailing list sign up section
+*/
+
+#mailing-list{
+    width: 460px;
+/*    width: 290px;*/
+    letter-spacing: -3px;
+    background-color: #DDD;
+    padding: 5px;
+    border-radius: 2px;
+}
+#mailing-list.error{
+    background-color: #D3D3D3;
+}
+#mailing-list.success{
+    background-color: #7FE574;
+}
+#mailing-list input{
+    letter-spacing: 0;
+    display: inline-block;
+    border-radius: 3px;
+    vertical-align: top;
+}
+#mailing-list input[type=email]{
+/*    width: 175px;*/
+    width: 345px;
+    padding: 0 10px 0 10px;
+    color: #888;
+    height: 31px;
+}
+#mailing-list input[type=submit]{
+    width: 80px;
+    background: url(/wp-content/themes/mib2012/assets/images/backgrounds/submitButtonBg.png) repeat-x;
+    height: 35px;
+    margin: 0 0 0 7px;
+    border: none;
+    color: #A93A1B;
+    font-weight: bold;
+    -moz-box-shadow: 2px 2px 2px #B6B6B6;
+    -webkit-box-shadow: 2px 2px 2px #B6B6B6;
+    box-shadow: 2px 2px 2px #B6B6B6;
+    height: 35px; 
+}
+#mailing-list label{
+    display: none;
+}
+#mailing-list input[type=email].error{
+    border: 2px solid #E81515;
+}
+#mailing-list p{
+    color: #FFF;
+	letter-spacing: 0;
+}
+
+/* 4.1 Error Handling */
+/*
+    All styles relating to the error handling of the form submission
+*/
+
+p.error{
+    color: #E81515;
+    font-size: 10px;
+    padding: 0;
+    margin: 0 0 5px 5px;
+}
+
+
+/* - Header - */
+div#header a#logo img {
+	float:left;
+	margin-top:32px;
+}
+div#header div#event-details {
+	float:right;
+	margin:26px 19px 0 0;
+	text-align:right;
+}
+div#header div#event-details h2 {
+	margin:0;
+	font-size:2.17em;
+	line-height:0.69em;
+	font-family:"FedraSerifPro B";
+	letter-spacing:-0.03em;
+	color:#333;
+}
+div#header div#event-details h3 {
+	margin-top:-2px;
+	margin-bottom:0;
+	font-size:1.33em;
+	line-height:1em;
+	letter-spacing:-0.03em;
+}
+div#header:after {
+}
+
+/* - Top Navigation - */
+div#top-nav {
+	clear:both;
+	margin: 24px 0;
+	float: left;
+	height: 24px;
+	overflow: hidden;
+	width: 100%;
+}
+div#top-nav ul{
+	width: 100%;
+	float: left;
+	white-space: nowrap;
+}
+div#top-nav ul li {
+	display: inline;
+	height: 24px;
+	margin-right: 40px;
+}
+div#top-nav ul li.blog {
+	float:right;
+	margin-right:20px;
+}
+div#top-nav ul li a {
+	font-size:1.67em;
+	line-height:1.2em;
+	text-decoration:none;
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-weight: lighter;
+}
+div#top-nav ul li.current_page_parent a, div#top-nav ul li.current_page_item a, div#top-nav ul li a:hover{
+	color:#ff6633;
+}
+
+div#top-nav:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+/* - register now - */
+
+div#register-now {
+	position:fixed;
+	right: 0;
+	top:22px;
+}
+div#register-now a {
+	display:block;
+	width:108px;
+	height:54px;
+	background:url("_images/site_register-now.png") no-repeat left top;
+}
+div#register-now a span {
+	display:none;
+}
+
+/* - Side Navigation - */
+div#aside p {
+	line-height:1.33em;
+}
+div#aside img {
+	margin-bottom:21px;
+}
+div#aside h3 {
+	margin-bottom:1.6em;
+}
+div#aside ul {
+	margin-bottom:-5px;
+}
+div#aside ul li {
+	margin-bottom:5px;
+}
+
+/* Page nav */
+
+div.page-nav{
+	width: 100%;
+	float: left;
+	margin: 20px 0 0 0;
+	border-top: 1px solid #ccc;
+	padding: 20px 0 10px 0;
+}
+
+/* pagination */
+div.page-nav ol.wp-paginate{
+	list-style: none;
+	margin: 0 auto;
+}
+
+div.page-nav ol.wp-paginate li{
+	padding: 0;
+	float: left;
+	margin: 0 0 0 5px;
+	display: inline;
+	text-align: center;
+}
+
+div.page-nav ol.wp-paginate li a, div.page-nav ol.wp-paginate li span.current{
+	text-decoration: none;
+	background: #bbb;
+	height: 16px;
+	width: 20px;
+	float: left;
+	display: block;
+	color: #fff;
+}
+
+div.page-nav ol.wp-paginate li a.prev, div.page-nav ol.wp-paginate li a.next{
+	background: none;
+}
+
+div.page-nav ol.wp-paginate li span.title{
+	display: none;
+}
+
+div.page-nav ol.wp-paginate li span.current, div.page-nav ol.wp-paginate li a:hover{
+	background: #ff6633;
+	color: #fff;
+}
+div.page-nav ol.wp-paginate li a.next:hover, div.page-nav ol.wp-paginate li a.prev:hover{
+	background: none !important;
+}
+
+/* Single Next/previous links */
+
+.prev-page{	float: left;	}
+.next-page{	float: right;	}
+
+/* - Footer - */
+div#footer-container {
+	margin-top: 20px;
+	padding: 20px 0 30px 0;
+	background:#ff6633;
+}
+div#footer {
+	margin:0 auto;
+	width:960px;
+}
+div#footer ul li {
+	line-height:1.2em;
+	list-style:none;
+}
+div#footer ul .children
+{
+	margin: 0px !important;
+	padding: 0px !important;
+}
+div#footer p,
+div#footer a,
+div#footer h2,
+div#footer h3 {
+	color:#fff;
+}
+div#footer p {
+	line-height:1.3em;
+}
+div#footer h2 {
+	margin:0 0 0.9em;
+	font-size:1.67em;
+	line-height:1.2em;
+	font-weight:lighter;
+}
+div#footer h3 {
+	font-size:1em;
+	line-height:1.2em;
+}
+div#footer div.col-245 {
+	float:left;
+	padding-right:40px;
+    width:205px;
+}
+div#footer div#copyrights {
+	padding-top:4px;
+}
+div#footer div#copyrights ul li{
+	margin: 0 0 30px 0;
+}
+
+div#footer div#twitter {
+	float:right;
+	width:224px;
+}
+div#footer div#twitter h2 a{
+	text-decoration:none;
+}
+div#footer div#quicklinks ul {
+	margin-bottom:15px;
+}
+div#footer div#quicklinks ul li a{
+	line-height:1.5em;
+}
+div#footer div#sponsors ul li{
+	float:left;
+	margin: 0 0 30px 0;
+}
+div#footer div#twitter ul#feed li#tweet-0 {
+	font-size:1.25em;
+	line-height:1.33em;
+}
+div#footer div#twitter ul#feed li#tweet-0 span.tweetdate {
+	font-size:0.67em;
+}
+div#footer div#twitter ul#feed li.tweet {
+	margin-bottom:10px;
+	font-size:0.83em;
+	line-height:1.2em;
+	color:#fff;
+}
+div#footer div#twitter ul#feed li.tweet span.tweetdate {
+	text-decoration:underline;
+}
+div#footer-container:after {
+	content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+/* - Columns - */
+div.col-third {
+	float: left;
+	margin-right: 32px;
+	width: 293px;
+}
+
+/* - Home Page - */
+
+div#homepage div.banner {
+	height:297px;
+	background:url("_images/site_home-banner-placeholder.jpg") no-repeat left top;
+}
+div#homepage h2 {
+    margin: 0 0 1.4em;
+	font-size:1.50em;
+	line-height:1.2em;
+	color:#333;
+}
+div#homepage p {
+	margin:0 0 1.6em;
+}
+
+/* Slideshow */
+
+div#home-slideshow{
+	margin: -1px 0 20px -1px;
+	width: 940px;
+	height: 300px;
+	padding: 1px;
+	background: #fff url('_images/site_cornices-bg.gif') no-repeat 0 0;
+	position: relative;
+	overflow: hidden;
+	float: left;
+}
+
+div#home-slideshow img#prev-slide, div#home-slideshow img#next-slide{
+	position: absolute;
+	top: 50%;
+	margin-top: -33px;
+	cursor: pointer;
+	z-index: 255;
+	opacity: 0;
+}
+div#home-slideshow img#prev-slide{
+	left: -10px;
+}
+div#home-slideshow img#next-slide{
+	right: 10px;
+}
+div#home-slideshow #slides{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+div#home-slideshow #slides img{
+	margin: 0 auto;
+	position: absolute;
+	left: 20px;
+	top: 20px;
+}
+
+#slideshow-pager{
+	list-style: none;
+	width: auto;
+	position: absolute;
+	z-index: 255;
+	bottom: 30px;
+	left: 50%;
+	opacity: 0.7;
+}
+#slideshow-pager ul{
+	margin-left: -50%;
+}
+#slideshow-pager ul li{
+	height: 12px;
+	width: 20px;
+	padding: 0;
+	float: left;
+	background: #bbb;
+	color: #bbb;
+	margin: 0 0 0 5px;
+	display: inline;
+	cursor: pointer;
+}
+#slideshow-pager ul li:first-child{
+	margin: 0;
+}
+#slideshow-pager ul li.activeSlide{
+	background: #ff6633;
+	color: #ff6633;
+}
+
+/* Columns */
+
+div#homepage div#latest-news a{
+	position:relative;
+}
+div#homepage div#latest-news a img {
+	margin-left:3px;
+}
+div#homepage div#latest-news h3 a {
+	margin:0;
+	text-decoration: none;
+	font-size:2.00em;
+	line-height:1.2em;
+	color:#ff6633;
+}
+div#homepage div#latest-news h3
+{
+	font-size: 1em;
+	margin: 0;
+}
+div#homepage div#latest-news h4 {
+	margin:-0.18em 0 1.1em;
+	font-size:1em;
+	font-weight:normal;
+}
+div#homepage div#latest-news p {
+	margin-bottom:1.4em;
+}
+div#homepage div#latest-news #latest-news-rss-icon{
+	margin: 1px 0 -1px 4px;
+}
+
+/* - Projects and People */
+
+ul#projects-index, ul#people-index, ul#project-creators, #people-projects ul, ul#search-index{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	font-size: 0.8em;
+}
+ul#projects-index li, ul#people-index li, ul#project-creators li, #people-projects ul li, ul#search-index li{
+	list-style: none !important;
+	background: none;
+	float: left;
+	width: 144px;
+	height: 130px;
+	margin: 0 20px 20px 0;
+	padding: 0;
+}
+ul#projects-index li img, ul#people-index li img, ul#project-creators li img, #people-projects ul li img, ul#search-index li img{
+	width: 100%;
+	height: 73px;
+	margin: 0 0 10px 0;
+}
+ul#projects-index li h4, ul#people-index li h4, ul#project-creators li h4, #people-projects ul li h4, ul#search-index li h4{
+	margin: 0;
+}
+
+/* Project specific */
+
+#project-single h1{
+	margin: 0 0 -10px 0;
+	line-height: 1em;
+}
+project-single h3{
+	margin: 0 0 30px 0;
+	line-height: 1em;
+}
+
+ul#project-creators li{
+	margin: 0 0 10px 0 !important;
+	float: none;
+}
+
+#project-images{
+	margin: 0;
+}
+
+#project-images img{
+	margin: 0 0 20px 0;
+}
+
+/* People specific */
+
+#people-single h1{
+	margin: 0 0 -10px 0;
+	line-height: 1em;
+}
+
+#people-projects{
+	margin: 0 !important;
+}
+
+#people-projects ul{
+	margin: 20px 0 0 0;
+}
+
+#people-projects ul li{
+	margin: 0 0 10px 0 !important;
+	float: none;	
+}
+
+img#people-profile{
+	margin: 0 0 20px 0;
+}
+
+/* - 404 Page - */
+div#error-404 div#content{
+	width:100%;
+}
+div#error-404 label.screen-reader-text {
+	display:none;
+}
+form#searchform {
+	margin: 0;
+}
+form#searchform input#s {
+	margin-right:15px;
+	padding:6px 5px;
+	width:160px;
+	height:18px;
+	line-height:18px;
+	border:1px solid #FF6633;
+	color:#333;
+}
+form#searchform input#searchsubmit {
+	height:35px;
+	width:101px;
+	background:url("_images/site_back-search.gif") no-repeat left top;
+}
+
+/* - Single Post - */
+h3#post-date {
+	margin:-1.2em 0 0.9em;
+}
+
+.avatar{
+	float: left;
+	margin: 0 10px 10px 0;
+}
+
+.entry{
+	clear: both;
+}
+
+/* - Post Navigation - */
+.post-navigation
+{
+	float: left;
+	width: 636px;
+	margin: 0 0 10px 0;
+}
+
+.alignleft
+{
+	float: left;
+}
+
+.alignright
+{
+	float: right;
+}
+
+/* - Comments - */
+div#comments {
+	margin-top:30px;
+	border-top:1px solid #ccc;
+}
+h3#comments {
+    margin: 0.4em 0 0.7em;
+    font-size: 2em;
+    line-height: 1.2em;
+    color: #FF6633;
+}
+ol.commentlist {
+	padding-bottom:1px;
+	border-bottom:1px solid #ccc;
+	list-style:none;
+}
+ol.commentlist li.comment {
+	margin-bottom:20px;
+}
+ol.commentlist li.comment img.avatar {
+	float:left;
+	margin-right:10px;
+}
+ol.commentlist li.comment cite.fn,
+ol.commentlist li.comment span.says {
+    font-size: 1.33em;
+    line-height: 1.2em;
+    margin: 0.9em 0 1.2em;
+}
+ol.commentlist li.comment div.comment-meta a {
+	float:left;
+    margin:0 0 1.1em;
+    font-size:1em;
+    font-weight:normal;
+	text-decoration:none;
+}
+ol.commentlist li.comment div.comment-body {
+	margin:12px 0 0 0;
+}
+ol.commentlist li.comment div.comment-body p {
+	clear:left;
+	margin-left:42px;
+}
+ol.commentlist li.comment span.awaiting-moderation {
+	display:block;
+	clear:left;
+	margin:0 0 4px 42px;
+	font-size:1em;
+	line-height:1.5em;
+	color:#666;
+}
+ol.commentlist li.comment div.reply {
+	margin-left:42px;
+}
+form#commentform label{
+	display:block;
+	margin-bottom:4px;
+	font-size:1.17em;
+	line-height:1.1em;
+	font-weight:normal;
+}
+form#commentform label span.small,
+form#commentform label span.required {
+	font-size:0.79em;
+	line-height:1.1em;
+}
+form#commentform label span.required {
+	color:#a22020;
+}
+form#commentform input {
+	margin-bottom:14px;
+	width:270px;
+}
+form#commentform input:hover,
+textarea#comment:hover {
+	background:#f6f6f6;
+}
+textarea#comment {
+	padding:6px 5px;
+	height:120px;
+	width:400px;
+	font-size:1em;
+	font-family:Georgia, Arial, "Helvetica", sans-serif;
+	color:#333;
+	border:1px solid #ccc;
+	background:none;
+}
+form#commentform input#submit {
+	display:block;
+	width:170px;
+	height:33px;
+	cursor:pointer;
+	text-indent:-999em;
+	border:none;
+	background:url("_images/site_back-submit-comment.gif") no-repeat left top;
+}
+/* - Contact form - */
+form.wpcf7-form p {
+	margin:0;
+}
+form.wpcf7-form label {
+	display:block;
+	margin-bottom:4px;
+	font-size:1.17em;
+	line-height:1.1em;
+	font-weight:normal;
+}
+form.wpcf7-form label span.required {
+	font-size:0.79em;
+	line-height:1.1em;
+	color:#a22020;
+}
+form.wpcf7-form input {
+	margin-bottom:14px;
+	padding:4px 5px;
+	width:270px;
+	font-size:1em;
+	line-height:1.2em;
+	font-family:Georgia, Arial, "Helvetica", sans-serif;
+	color:#333;
+	border:1px solid #ccc;
+	background:none;
+}
+form.wpcf7-form input:hover,
+form.wpcf7-form textarea:hover {
+	background:#f6f6f6;
+}
+form.wpcf7-form textarea {
+	margin-bottom:14px;
+	padding:6px 5px;
+	height:120px;
+	width:400px;
+	font-size:1em;
+	line-height:1.4em;
+	font-family:Georgia, Arial, "Helvetica", sans-serif;
+	color:#333;
+	border:1px solid #ccc;
+	background:none;
+}
+form.wpcf7-form input.wpcf7-submit {
+	display:block;
+	width:88px;
+	height:34px;
+	cursor:pointer;
+	text-indent:-9999em;
+	border:none;
+	background:url("_images/site_back-send.gif") no-repeat left top;
+}
+div.wpcf7-response-output {
+
+}
+form.wpcf7-form span.wpcf7-not-valid-tip {
+	display:block;
+	padding:0;
+	left:288px;
+	top:-3px;
+	width:172px;
+	height:21px;
+	border:none;
+	text-indent:-9999em;
+	background:url("_images/site_back-required-tip.gif") no-repeat left top;
+}
+form.wpcf7-form  img.ajax-loader {
+	display:none;
+}
+form.wpcf7-form  div.wpcf7-mail-sent-ng,
+form.wpcf7-form div.wpcf7-mail-sent-ok {
+    margin:0;
+    width:249px;
+	height:39px;
+    font-size:1em;
+	line-height:1.4em;
+	text-indent:-9999em;
+    border:none;
+    color:#FFFFFF;
+	background:#A22020 url("_images/site_back-send-error.gif") no-repeat left top;
+}
+form.wpcf7-form div.wpcf7-mail-sent-ok {
+	width:172px;
+	height:39px;
+	background:#66cc00 url("_images/site_back-send-success.gif") no-repeat left top;
+}
+/* - Tables - */
+table tr th,
+table tr td {
+	padding:0 20px 3px 0;
+	line-height:1.5em;
+	text-align:left;
+}
+table tr td.times {
+	width:95px;
+}

@@ -1,0 +1,15 @@
+/**
+ * Styles for Internet Explorer 7
+ *
+ * Original Author: Rishee Patel
+ *
+ */
+
+div#top-nav,
+div#main,
+div#footer-container {
+	min-height:1%;
+}
+form.wpcf7-form span.wpcf7-not-valid-tip {
+	top:2px;
+}
