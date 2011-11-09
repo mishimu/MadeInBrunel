@@ -220,7 +220,7 @@ div.main:after {
     background-color: #DDD;
     padding: 5px;
     border-radius: 2px;
-	margin: 0 0 15px 0;
+	margin: 0 0 25px 0;
 }
 #mailing-list.error{
     background-color: #D3D3D3;
@@ -301,7 +301,7 @@ p.error{
 .tweetContainer{
     border-bottom: 1px solid #E7E7E7;
 	border-top: 1px solid #E7E7E7;
-    padding: 10px 0 20px 0;
+    padding: 10px 0 10px 0;
     margin: 10px 0 10px 0;
 }
 .tweet_list{
@@ -310,9 +310,11 @@ p.error{
     padding: 0;
     overflow: hidden;
 }
-.tweet_list li{
+.tweetContainer .tweet_list li{
 	float: left;
 	margin: 0 0 10px 0;
+	padding: 0;
+	background: none;
 }
 .tweet_list li a,
 .tweet_list li span{
@@ -323,8 +325,8 @@ p.error{
     margin: 0 8px 0 0;
 }
 .tweet_list li span{
-/*    width: 240px;*/
     width: 230px;
+	float: right;
 }
 .tweet_list .tweet_time{
     font-size: 10px;
