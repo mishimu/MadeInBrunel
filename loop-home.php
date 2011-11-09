@@ -50,9 +50,14 @@
 					<input type="email" name="email" id="email" placeholder="enter your email address...">		
 					<input type="submit" value="Submit" name="submit">
 				</form>	
-				<!-- facebook box -->
+				<!-- facebook like box -->
 				<div class="fb-like-box" data-href="https://www.facebook.com/pages/Made-in-Brunel/114148701984867" data-width="280" <div class="fb-like-box" data-href="http://www.facebook.com/platform" data-width="292" data-show-faces="true" data-stream="false" data-header="false">
-				</div>				
+				</div>		
+				<!-- twitter feed -->
+				<div class="tweetContainer"></div>
+				<span class="follow">
+					<a href="https://twitter.com/madeinbrunel12" class="twitter-follow-button">Follow @madeinbrunel12</a>
+				</span>
 			</div>
 			<div id="latest-news" class="col-third no-margin">
 				<h2>Latest News <a href="<?php bloginfo('rss2_url'); ?>"><img id="latest-news-rss-icon" src="/wp-content/themes/mib/_images/site_rss-icon.gif" alt="RSS Feed" /></a></h2>

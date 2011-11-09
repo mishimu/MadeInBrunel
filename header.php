@@ -48,6 +48,18 @@
 	<script type="text/javascript" src="/wp-content/themes/mib/_js/jquery.cycle.all.min.js"></script>
 	<script type="text/javascript" src="/wp-content/themes/mib/_js/core.js"></script>
 	<script type="text/javascript" src="/wp-content/themes/mib/_js/mailingList.js"></script>
+	<script src="/wp-content/themes/mib2012/assets/js/libs/jquery.tweet.js"></script> <!-- tweet feed -->
+	<script type='text/javascript'>
+		jQuery(function($){
+			$(".tweetContainer").tweet({
+			  avatar_size: 50,
+			  count: 2,
+			  query: "madeinbrunel",
+			  loading_text: "Searching twitter for Made In Brunel",
+			  template: "{avatar}{join}{text}{time}"
+			});
+		});
+	</script>
 	<!-- google analytics -->
 	<script type="text/javascript">
 	  var _gaq = _gaq || [];
