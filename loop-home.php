@@ -51,7 +51,7 @@
 					<input type="submit" value="Submit" name="submit">
 				</form>	
 				<!-- facebook box -->
-				<div class="fb-like-box" data-href="https://www.facebook.com/pages/Made-in-Brunel/114148701984867" 							data-width="280" data-show-faces="false" data-stream="true" data-header="false">
+				<div class="fb-like-box" data-href="https://www.facebook.com/pages/Made-in-Brunel/114148701984867" data-width="280" <div class="fb-like-box" data-href="http://www.facebook.com/platform" data-width="292" data-show-faces="true" data-stream="false" data-header="false">
 				</div>				
 			</div>
 			<div id="latest-news" class="col-third no-margin">
