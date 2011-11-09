@@ -215,12 +215,12 @@ div.main:after {
 */
 
 #mailing-list{
-    width: 460px;
-/*    width: 290px;*/
+	width: 285px;
     letter-spacing: -3px;
     background-color: #DDD;
     padding: 5px;
     border-radius: 2px;
+	margin: 0 0 15px 0;
 }
 #mailing-list.error{
     background-color: #D3D3D3;
@@ -235,8 +235,7 @@ div.main:after {
     vertical-align: top;
 }
 #mailing-list input[type=email]{
-/*    width: 175px;*/
-    width: 345px;
+	width: 175px;
     padding: 0 10px 0 10px;
     color: #888;
     height: 31px;
