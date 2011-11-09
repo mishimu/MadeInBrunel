@@ -40,7 +40,7 @@
 	<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/wp-content/themes/mib/_css/ie8.css" /><![endif]-->
 	
 	<script type="text/javascript" src="/wp-content/themes/mib/_js/functions.js"></script>
-	<script type="text/javascript" src="/wp-content/themes/mib/_js/jquery.1.5.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 	<script type="text/javascript" src="/wp-content/themes/mib/_js/jquery.tools.min.js"></script>
 	<script type="text/javascript" src="/wp-content/themes/mib/_js/cufon-yui.js"></script>
 	<script type="text/javascript" src="/wp-content/themes/mib/_js/FedraSerifPro_B.font.js"></script>
