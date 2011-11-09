@@ -86,7 +86,21 @@
 </head>
 
 <body>
-
+	<!-- facebook sdk loading -->
+	<!-- appid for mib = 114148701984867 -->
+	<div id="fb-root"></div>
+	<script>
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {
+				return;
+			}
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=114148701984867";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+	<!-- facebook sdk loading END -->
 <!--<#?php $id = $wp_query->post->ID; ?>-->
 
 	<!-- Top Container Start-->

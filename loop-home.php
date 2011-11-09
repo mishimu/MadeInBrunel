@@ -49,7 +49,10 @@
 					<label for="email">Email Address</label>
 					<input type="email" name="email" id="email" placeholder="enter your email address...">		
 					<input type="submit" value="Submit" name="submit">
-				</form>				
+				</form>	
+				<!-- facebook box -->
+				<div class="fb-like-box" data-href="https://www.facebook.com/pages/Made-in-Brunel/114148701984867" 							data-width="280" data-show-faces="false" data-stream="true" data-header="false">
+				</div>				
 			</div>
 			<div id="latest-news" class="col-third no-margin">
 				<h2>Latest News <a href="<?php bloginfo('rss2_url'); ?>"><img id="latest-news-rss-icon" src="/wp-content/themes/mib/_images/site_rss-icon.gif" alt="RSS Feed" /></a></h2>
