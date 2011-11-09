@@ -39,7 +39,17 @@
                     <p><a href="<?php echo get_page_link(7); ?>">Read our story</a></p>
 			</div>
 			<div id="socialMedia" class="col-third">
-
+				<h2> Join the mailing list </h2>
+				<p>
+					Join us on the exciting journey of making Made In Brunel 2012
+					a reality. Simply type your e-mail address below and we'll do
+					all the rest!
+				</p>
+				<form id="mailing-list" action="mailing-list-process.php" method="POST">
+					<label for="email">Email Address</label>
+					<input type="email" name="email" id="email" placeholder="enter your email address...">		
+					<input type="submit" value="Submit" name="submit">
+				</form>				
 			</div>
 			<div id="latest-news" class="col-third no-margin">
 				<h2>Latest News <a href="<?php bloginfo('rss2_url'); ?>"><img id="latest-news-rss-icon" src="/wp-content/themes/mib/_images/site_rss-icon.gif" alt="RSS Feed" /></a></h2>
