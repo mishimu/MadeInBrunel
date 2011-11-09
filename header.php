@@ -59,7 +59,13 @@
 		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	  })();
 	</script>
-    
+	<!-- facebook meta data -->
+	<meta property="og:title" content="Made In Brunel 2012">
+	<meta property="og:type" content="product">
+	<meta property="og:url" content="http://madeinbrunel.com/">
+	<meta property="og:image" content="http://madeinbrunel.com/wp-content/themes/mib2012/assets/images/MIB_Icon.png">
+	<meta property="og:site_name" content="Made In Brunel ">
+	<meta property="fb:admins" content="1619700045">	
 	<?php //include('./wp-content/themes/mib/_includes/twitter-rss.php'); ?>
 
 <?php
