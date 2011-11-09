@@ -39,6 +39,8 @@ OrangeL #ff6633
 	3.0 Layout
 	4.0 Mailing List
 		4.1 Error Handling
+	5.0 Social Media
+		5.1 Twitter Feed
 
 */
 
@@ -275,6 +277,53 @@ p.error{
     margin: 0 0 5px 5px;
 }
 
+/* 5.0 Social Media */
+/*
+    All general rules relating to the social media feeds on the home page
+*/
+
+.follow{
+    margin: 0 0 10px 10px;
+    display: block;
+}
+
+/* 5.1 Twitter Feed */
+/*
+    All styles relating to the twitter feed jquery plugin
+    The plugin uses _ for class names 
+*/
+
+.tweetContainer{
+    border-bottom: 1px solid #E7E7E7;
+    padding: 0 0 20px 0;
+    margin: 0 0 10px 0;
+}
+.tweet_list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.tweet_list li{
+	float: left;
+	margin: 0 0 10px 0;
+}
+.tweet_list li a,
+.tweet_list li span{
+    float: left;
+    font-family: arial, sans-serif;
+}
+.tweet_list li a{
+    margin: 0 8px 0 0;
+}
+.tweet_list li span{
+/*    width: 240px;*/
+    width: 230px;
+}
+.tweet_list .tweet_time{
+    font-size: 10px;
+    margin: 8px 0 0 0;
+}
 
 /* - Header - */
 div#header a#logo img {
