@@ -239,6 +239,9 @@ div.main:after {
     padding: 0 10px 0 10px;
     color: #888;
     height: 31px;
+	/* needed to overwrite generic styles - something to look into */
+	background: #FFF;
+	margin: 0;
 }
 #mailing-list input[type=submit]{
     width: 80px;
@@ -252,6 +255,7 @@ div.main:after {
     -webkit-box-shadow: 2px 2px 2px #B6B6B6;
     box-shadow: 2px 2px 2px #B6B6B6;
     height: 35px; 
+	text-indent: 0;
 }
 #mailing-list label{
     display: none;
