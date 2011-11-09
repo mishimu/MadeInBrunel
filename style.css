@@ -235,7 +235,7 @@ div.main:after {
     vertical-align: top;
 }
 #mailing-list input[type=email]{
-	width: 175px;
+	width: 173px;
     padding: 0 10px 0 10px;
     color: #888;
     height: 31px;
@@ -266,6 +266,8 @@ div.main:after {
 #mailing-list p{
     color: #FFF;
 	letter-spacing: 0;
+	/* overwrites existing styles */
+	margin: 0;
 }
 
 /* 4.1 Error Handling */
@@ -598,7 +600,7 @@ div#homepage h2 {
 	color:#333;
 }
 div#homepage p {
-	margin:0 0 1.6em;
+	/* margin:0 0 1.6em; */
 }
 
 /* Slideshow */
