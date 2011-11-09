@@ -47,6 +47,7 @@
 	<script type="text/javascript" src="/wp-content/themes/mib/_js/Frutiger_LT_Std.font.js"></script>
 	<script type="text/javascript" src="/wp-content/themes/mib/_js/jquery.cycle.all.min.js"></script>
 	<script type="text/javascript" src="/wp-content/themes/mib/_js/core.js"></script>
+	<script type="text/javascript" src="/wp-content/themes/mib/_js/mailingList.js"></script>
 	<!-- google analytics -->
 	<script type="text/javascript">
 	  var _gaq = _gaq || [];
