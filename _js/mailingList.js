@@ -111,3 +111,7 @@ mail = {
         }
 };
 
+$(document).ready(function () {
+	mail.init();
+});
+
