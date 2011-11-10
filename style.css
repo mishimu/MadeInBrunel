@@ -533,7 +533,7 @@ div#footer h3 {
 div#footer div.col-245 {
 	float:left;
 	padding-right:40px;
-    width:205px;
+    width:305px;
 }
 div#footer div#copyrights {
 	padding-top:4px;
@@ -543,7 +543,7 @@ div#footer div#copyrights ul li{
 }
 
 div#footer div#twitter {
-	float:right;
+	float:left;
 	width:224px;
 }
 div#footer div#twitter h2 a{
@@ -551,6 +551,9 @@ div#footer div#twitter h2 a{
 }
 div#footer div#quicklinks ul {
 	margin-bottom:15px;
+	display: inline-block;
+	width: 150px;
+	vertical-align: top;
 }
 div#footer div#quicklinks ul li a{
 	line-height:1.5em;
