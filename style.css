@@ -238,7 +238,7 @@ div.main:after {
 	width: 173px;
     padding: 0 10px 0 10px;
     color: #888;
-    height: 31px;
+    height: 33px;
 	/* needed to overwrite generic styles - something to look into */
 	background: #FFF;
 	margin: 0;
@@ -299,10 +299,9 @@ p.error{
 */
 
 .tweetContainer{
-    border-bottom: 1px solid #E7E7E7;
 	border-top: 1px solid #E7E7E7;
-    padding: 20px 0 10px 0;
-    margin: 10px 0 10px 0;
+    padding: 20px 0 0 0;
+    margin: 10px 0 0 0;
 }
 .tweetContainer .tweet_list{
     list-style: none;
@@ -316,10 +315,6 @@ p.error{
 	padding: 0 0 10px 0;
 	background: none;
 	border-bottom: 1px dotted #E7E7E7;
-}
-.tweetContainer .tweet_list li:last-child{
-	border-bottom: none;
-	margin: 0;
 }
 .tweet_list li a,
 .tweet_list li span{
