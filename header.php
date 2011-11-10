@@ -6,10 +6,17 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<meta http-equiv="content-type" charset="<?php bloginfo( 'charset' ); ?>" />
+<meta http-equiv="content-type" charset="<?php bloginfo( 'charset' ); ?>" >
 <meta name="Description" content="Made in Brunel gives the public an opportunity to experience the brightest creations from Brunel University's globally renowned School of Engineering and Design.">
 <meta http-equiv="Keywords" content="Made in Brunel, Brunel University, School of Engineering and Design, Design exhibition, student exhibition, product design, industrial design, multimedia technology and design">
-<meta name="Author" content="Made in Brunel" />
+<meta name="Author" content="Made in Brunel">
+<!-- facebook meta data -->
+<meta property="og:title" content="Made In Brunel 2012">
+<meta property="og:type" content="website">
+<meta property="og:url" content="http://madeinbrunel.com/">
+<meta property="og:image" content="http://madeinbrunel.com/wp-content/themes/mib2012/assets/images/MIB_Icon.png">
+<meta property="og:site_name" content="Made In Brunel ">
+<meta property="fb:admins" content="1619700045">	
 <title><?php
 	/*
 	 * Print the <title> tag based on what is being viewed.
@@ -72,13 +79,7 @@
 		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	  })();
 	</script>
-	<!-- facebook meta data -->
-	<meta property="og:title" content="Made In Brunel 2012">
-	<meta property="og:type" content="product">
-	<meta property="og:url" content="http://madeinbrunel.com/">
-	<meta property="og:image" content="http://madeinbrunel.com/wp-content/themes/mib2012/assets/images/MIB_Icon.png">
-	<meta property="og:site_name" content="Made In Brunel ">
-	<meta property="fb:admins" content="1619700045">	
+
 	<?php //include('./wp-content/themes/mib/_includes/twitter-rss.php'); ?>
 
 <?php
