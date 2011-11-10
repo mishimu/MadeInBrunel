@@ -1,8 +1,8 @@
 /**
  * Styles for Internet Explorer 8
  *
- * Original Author: Rishee Patel
- *
+ * Author's 2011: Rishee Patel
+ * Author's 2012: Aaron Faber
  */
 
 div#header div#event-details h3 {
@@ -12,4 +12,14 @@ form.wpcf7-form label span.required,
 form#commentform label span.small,
 form#commentform label span.required {
 	vertical-align:2px;
+}
+
+/* 4.0 Mailing List */
+/*
+	All styles relating to the mailing list sign up section
+*/
+
+#mailing-list input[type=email]{
+    padding: 8px 10px 8px 10px;
+    height: auto;
 }

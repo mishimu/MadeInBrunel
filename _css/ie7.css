@@ -1,8 +1,8 @@
 /**
  * Styles for Internet Explorer 7
  *
- * Original Author: Rishee Patel
- *
+ * Author's 2011: Rishee Patel
+ * Author's 2012: Aaron Faber
  */
 
 div#top-nav,
@@ -24,8 +24,7 @@ form.wpcf7-form span.wpcf7-not-valid-tip {
     zoom: 1;
 }
 #email{
-
-    width: 345px;
+	width: 173px;
     padding: 8px 10px 8px 10px;
     color: #888;
 	/* needed to overwrite generic styles - something to look into */
