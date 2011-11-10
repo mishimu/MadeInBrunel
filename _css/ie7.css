@@ -13,3 +13,22 @@ div#footer-container {
 form.wpcf7-form span.wpcf7-not-valid-tip {
 	top:2px;
 }
+
+/* 4.0 Mailing List */
+/*
+	All styles relating to the mailing list sign up section
+*/
+
+#mailing-list input{
+    display: inline;
+    zoom: 1;
+}
+#email{
+
+    width: 345px;
+    padding: 8px 10px 8px 10px;
+    color: #888;
+	/* needed to overwrite generic styles - something to look into */
+	background: #FFF;
+	margin: 0;
+}
