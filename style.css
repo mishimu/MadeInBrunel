@@ -301,7 +301,7 @@ p.error{
 .tweetContainer{
 	border-top: 1px solid #E7E7E7;
     padding: 20px 0 0 0;
-    margin: 10px 0 0 0;
+    margin: 25px 0 0 0;
 }
 .tweetContainer .tweet_list{
     list-style: none;
