@@ -24,26 +24,28 @@
 			</div>
 			<div class="col-245" id="quicklinks">
 				<h2>Navigation</h2>
-					<ul>
-                    	<li class="page_item page-item-17"><a href="/" title="Home">Home</a></li> 
-						<li class="page_item page-item-2"><a href="/show-and-events/" title="Show and Events">Show and Events</a> 
-							<ul class='children'> 
-								<li class="page_item page-item-173"><a href="/show-and-events/pecha-kucha/" title="Pecha Kucha">Pecha Kucha</a></li> 
-								<li class="page_item page-item-172"><a href="/show-and-events/8-brand-visions/" title="8 Brand Visions">8 Brand Visions</a></li> 
-							</ul> 
-						</li> 
-						<li class="page_item page-item-309"><a href="/news/" title="News">News</a></li> 
-						<li class="page_item page-item-5"><a href="/people/" title="Projects">People</a></li> 
-						<li class="page_item page-item-317"><a href="/projects/" title="Projects">Projects</a></li> 
-						<li class="page_item page-item-7"><a href="/history/" title="History">History</a></li> 
-						<li class="page_item page-item-9"><a href="/contact/" title="Contact">Contact</a> 
+				<ul>
+                    			<li class="page_item page-item-17"><a href="/" title="Home">Home</a></li> 
+				<!--
+					<li class="page_item page-item-2"><a href="/show-and-events/" title="Show and Events">Show and Events</a> 
+						<ul class='children'> 
+							<li class="page_item page-item-173"><a href="/show-and-events/pecha-kucha/" title="Pecha Kucha">Pecha Kucha</a></li> 
+							<li class="page_item page-item-172"><a href="/show-and-events/8-brand-visions/" title="8 Brand Visions">8 Brand Visions</a></li> 
+						</ul> 
+					</li> 
+				-->
+					<li class="page_item page-item-309"><a href="/news/" title="News">News</a></li> 
+					<li class="page_item page-item-5"><a href="/people/" title="Projects">People</a></li> 
+					<li class="page_item page-item-317"><a href="/projects/" title="Projects">Projects</a></li> 
+					<li class="page_item page-item-7"><a href="/history/" title="History">History</a></li> 
+					<li class="page_item page-item-9"><a href="/contact/" title="Contact">Contact</a> 
 						<ul class='children'> 
 							<li class="page_item page-item-49"><a href="/contact/terms-and-conditions/" title="Terms and Conditions">Terms and Conditions</a></li> 
 							<li class="page_item page-item-51"><a href="/contact/privacy-policy/" title="Privacy Policy">Privacy Policy</a></li> 
 						</ul> 
-						</li> 
-						<li class="page_item page-item-294"><a href="/register/" title="Register" rel="nofollow">Register</a></li> 
-                    </ul>
+					</li> 
+					<li class="page_item page-item-294"><a href="/register/" title="Register" rel="nofollow">Register</a></li> 
+                   		</ul>
 				<ul>
 					<li><a href="http://www.facebook.com/pages/Made-in-Brunel/114148701984867" target="_blank">Facebook</a></li>
 					<li><a href="http://twitter.com/madeinbrunel11" target="_blank">Twitter</a></li>
